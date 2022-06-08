@@ -53,16 +53,18 @@ namespace Metody17
             pole[indexmax] = posledni;
             pole[pole.Length - 1] = max;
         }
-        int n = int.Parse(textBox1.Text);
-        double[] pole = new double[n];
+        
+        double[] pole;
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            int n = int.Parse(textBox1.Text);
+            pole = new double[n];
             Form1.GenerovaniCisel(1, 10, pole);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             Form1.ZobrazitPole(pole, listBox1);
         }
 
